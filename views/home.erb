@@ -1,0 +1,69 @@
+<!-- SELLING POINT GOES HERE-->
+        
+        <section class="hero">
+
+            <div class="catchphrase">
+
+                <h2>We make <span>sweet memories</span></h2>
+                <p id="catch-para"></p>
+
+            </div>            
+
+        </section>
+
+<!-- ABOUT THE BAKERY -->
+
+        <section class="introductory">
+
+            <h2>A Neighborhood Baby</h2>
+            <img src="images/" alt="" class="owner-pic hidden">
+            <p id="intro-para"></p>
+
+        </section>
+
+<!-- MAIN PRODUCTS -->
+
+        <section class="featured">
+
+            <h2>Made to please</h2>
+            <p id="feature-para"></p>
+
+            <div class="featured-items">
+                
+                <div class="feature-card">
+                    <div class="feature-img feature-1">
+                        <a href="cakes.erb">
+                            <h3 class="hidden">See more Cakes</h3>
+                        </a>
+                    </div>
+                    <ul>
+                        <li><%= $cakes[1].name %></li>
+                        <li>$<%= $cakes[1].price %></li>
+                    </ul> 
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img feature-2">
+                        <a href="cookies.erb">
+                            <h3 class="hidden">See more Cookies</h3>
+                        </a>
+                    </div>
+                    <ul>
+                        <li><%= $cookies[0].name %></li>
+                        <li>$<%= $cookies[0].price %></li>
+                    </ul> 
+                </div>
+                <div class="feature-card">
+                    <div class="feature-img feature-3">
+                        <a href="muffins.erb">
+                            <h3 class="hidden">See more Muffins</h3>
+                        </a>
+                    </div>
+                    <ul>
+                        <li><%= $muffins[0].name %></li>
+                        <li>$<%= $muffins[0].price %></li>
+                    </ul> 
+                </div>
+
+            </div>
+
+        </section>

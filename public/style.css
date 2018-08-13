@@ -1,0 +1,288 @@
+:root {
+    --main-color: rgba(21, 135, 215, .8);
+    --complementary: rgba(228, 65, 152, 0.6);
+    --highlight-blue:  rgba(1, 82, 139, 1);
+    --highlight-pink:  rgba(185,  0, 91, 1);
+    --black: rgba(19, 24, 27, .8);
+    --off-white: rgba(228,231,234, 1);
+    
+    --col-4: repeat(4, 1fr);
+    --col-3: repeat(3, 1fr);
+    --col-2: repeat(2, 1fr);
+
+    --standard-row: minmax(6.25rem, auto);
+
+    --fixed-space: 3rem; 
+    --img-card-space: 5rem;
+    --img-card-margin: 2rem;
+    
+    --emphasis: 700;
+    --li-space: .5rem;
+
+    --img-shadow: 5px 10px 30px -4px rgba(82, 79, 82, 1);
+    --card-shadow: 5px 10px 30px -5px rgba(36, 36, 36, 0.85);
+    --area-shadow: 0px 15px 35px -5px rgba(20, 36, 36, .7);
+}
+
+/*************************************/
+/* -------------GLOBAL-------------- */
+/*************************************/
+
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    color: var(--black);
+    background-color: #fafafa;
+    font-family: 'Concert One', cursive;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+a, li {
+    list-style: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+p {
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.hidden {
+    display: none;
+}
+
+.break {
+    display: block;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: var(--standard-row);
+    grid-template-areas: 
+    'header'
+    'hero'
+    'intro'
+    'feature'
+    'footer';
+}
+
+/*************************************/
+/* ----------HEADER AREA------------ */
+/*************************************/
+
+header {
+    grid-area: header;
+    background-color: var(--main-color);
+    padding-bottom: 10rem;
+    position: relative; 
+    color: var(--off-white); 
+    box-shadow: var(--area-shadow); 
+}
+
+#logo {
+    position: absolute;
+    top: .1rem;
+    left: .5rem;
+    padding: 0 0 1rem .5rem;
+    font-size: 3rem;
+    letter-spacing: .6rem;
+}
+
+.menu-tab {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+
+.hidden-menu {
+    display: none;
+}
+
+/*************************************/
+/* ----------CONTENT AREA------------ */
+/*************************************/
+
+/* HERO */
+
+.hero {
+    background: center / cover no-repeat url('/images/hero-1.jpg');
+    height: 30vh;
+    grid-area: hero;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.catchphrase {
+    margin: 0 0 2rem 1.5rem;
+    color: var(--highlight-blue);
+    font-size: 1.8rem;
+}
+
+.catchphrase * {
+    padding-bottom: .5rem;
+    mix-blend-mode: multiply;
+}
+
+.catchphrase span {
+    color: var(--highlight-pink);
+    display: block;
+}
+
+/* #catch-para {
+
+}
+
+#catch-para::after {
+    content:;
+} */
+
+/* INTRO */
+
+.introductory {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    'title'
+    'subtext';    
+    justify-items: center;
+    text-align: center;
+}
+
+.introductory h2 {
+    grid-area: title;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    padding: .5rem;
+    font-size: 1.6rem;
+}
+
+#intro-para {
+    grid-area: subtext;
+    width: 70%;
+}
+
+#intro-para::after {
+    content: "Established in 2018, Bake Shack is a newcomer to Bed-Stuy, serving freshly baked cakes, cookies, and muffins daily.";
+    font-family: var(--sub-font-style);
+}
+
+/* FEATURED */
+
+/* .featured, .featured * {
+    border: 1px solid red;
+} */
+
+.featured {
+    grid-area: feature;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    grid-template-areas:
+    'title'
+    'subtext'
+    'items';
+    justify-items: center;
+    margin-bottom: var(--fixed-space);
+}
+
+.featured h2 {
+    grid-area: title;
+    margin: 1rem 0;
+    color: var(--complementary);
+    font-size: 1.6rem;
+}
+
+#feature-para {
+    grid-area: subtext;
+    text-align: center;
+    margin: .5rem;
+}
+
+#feature-para::after {
+    content: "Our goods are all made with the best local ingredients.";
+}
+
+.featured-items {
+    grid-area: items;
+    width: 90%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+.feature-card {
+    height: 30vh;
+    margin: 1rem 1.5rem 1.5rem 1.5rem;
+    background-color: var(--offwhite);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+    box-shadow: var(--card-shadow);
+}
+
+.feature-img {
+    background-color: var(--main-color);
+    height: 25vh;
+    margin-bottom: .5rem;
+}
+
+.featured-items div p {
+    margin: 0 0 2.5rem .5rem;
+}
+
+/*************************************/
+/* ----------FOOTER AREA------------ */
+/*************************************/
+
+footer {
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: var(--col-2)
+    grid-auto-rows: auto;
+    grid-template-areas:
+    'social social'
+    'contact contact'
+    'copyright copyright';
+    padding-top: 1rem;
+    background-color: var(--complementary);
+    text-align: center;
+}
+
+.social-media {
+    grid-area: social;
+    align-self: baseline;
+    margin: 1rem 0;
+}
+
+.social-media li {
+    display: inline;
+    padding: 0 var(--li-space);    
+}
+
+.icon-img {
+    width: 10%;
+}
+
+.contact-info {
+    grid-area: contact;
+}
+
+.contact-info span {
+    display: block;
+    padding-bottom: .3rem;
+}
+
+#copyright {
+    grid-area: copyright;
+    padding-bottom: 1rem;
+}
