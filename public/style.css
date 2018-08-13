@@ -230,6 +230,15 @@ header {
     box-shadow: var(--card-shadow);
 }
 
+.feature-card ul {
+    margin: 0 0 1rem 1rem;
+}
+
+.feature-card ul li {
+    display: inline;
+    padding: 0 var(--li-space);
+}
+
 .feature-img {
     background-color: var(--main-color);
     height: 25vh;
