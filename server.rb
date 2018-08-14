@@ -8,6 +8,8 @@ $cookies = []
 $cakes = []
 $muffins = []
 
+# These will push the objects to their respective arrays
+
 def add_to_cookies(cookie)
     $cookies << cookie
 end
@@ -59,6 +61,7 @@ get '/events' do
     @location = 'brooklyn'
     response = HTTParty.get("https://www.eventbriteapi.com/v3/events/search/?q=#{@query}&location.address=#{@location}&token=#{ ENV[ 'API_KEY' ] }")
     @event_data = JSON.parse(response.body)
+    # puts @event_data['events'].first
     @events = @event_data['events'].first(5)
 
     erb :events
@@ -175,13 +178,13 @@ end
 # Creating Each Product 
 # I could loop through this but I will need unique names for each. If there is a random name generator with flavors and price, would be splendid
 
-@cookie1 = Cookie.new('Overload', ['milk chocolate', 'macadamia', 'marshmallows'], 4)
+@cookie1 = Cookie.new('Overload', ['Milk chocolate', 'Macadamia', 'Marshmallows'], 4)
 @cookie1.add_image('/images/overload.jpg')
 
-@cookie2 = Cookie.new('Peanutty', ['Peanut Butter', 'Cashews'], 3)
+@cookie2 = Cookie.new('Peanutty', ['Peanut Butter', 'Cashews', 'Banana'], 3)
 @cookie2.add_image('/images/peanut-butter.jpg')
 
-@cookie3 = Cookie.new('Mint Condition', ['Mint', 'Dark Chocolate'], 3)
+@cookie3 = Cookie.new('Mint Condition', ['Mint', 'Dark Chocolate', 'Cacao Nibs'], 3)
 @cookie3.add_image('/images/mint.jpg')
 
 @cake1 = Cake.new('Dark Forest', ['Dark Chocolate', 'Coconut Flakes', 'Dulce De Leche'], 55)
@@ -193,7 +196,7 @@ end
 @cake3 = Cake.new('Red Winter', ['Strawberry Flan', 'Raspberries', 'Meringue'], 65)
 @cake3.add_image('/images/red-winter.jpg')
 
-@muffin1 = Muffin.new('Midnight', ['Dark Chocolate', 'Roasted Pecans'], 5)
+@muffin1 = Muffin.new('Midnight', ['Dark Chocolate', 'Roasted Pecans', 'Coffee Creme'], 5)
 @muffin1.add_image('/images/midnight.jpg')
 
 @muffin2 = Muffin.new('Egged', ['Sweet Custard Filling', 'Toasted Eggnog', 'Soft Meringue'], 5)

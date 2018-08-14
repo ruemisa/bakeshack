@@ -3,8 +3,8 @@
         <% products = $cookies %>
         <% products.each do |cookie| %>
     <div class="products">  
-        <h3><%= cookie.name %> </h3>
-        <img src=<%=cookie.images %> >
+        <h2><%= cookie.name %> </h2>
+        <img class="product-img" src=<%=cookie.images %> >
             <%  description = cookie.desc %>
             <%  description.each do |desc| %>
             <ul> 
@@ -12,6 +12,13 @@
             </ul>
                 <% end %>
         <p> $<%= cookie.price %> </p>
+        <form method="PATCH" action="/cart" autocomplete="off" class="cart-form">
+            <label> Qty: </label>
+            <input type="text" name="quantity" required>
+            <a href="">
+                <img src="/images/icons/025-shopping-bag.png">
+            </a>
+        </form>
     </div>  
         <% end %>
 </section>

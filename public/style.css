@@ -94,6 +94,7 @@ header {
     padding: 0 0 1rem .5rem;
     font-size: 3rem;
     letter-spacing: .6rem;
+    cursor: pointer;
 }
 
 .menu-tab {
@@ -141,14 +142,6 @@ header {
     color: var(--highlight-pink);
     display: block;
 }
-
-/* #catch-para {
-
-}
-
-#catch-para::after {
-    content:;
-} */
 
 /* INTRO */
 
@@ -215,7 +208,7 @@ header {
 }
 
 #feature-para::after {
-    content: "Our goods are all made with the best local ingredients.";
+    content: "Our goods are all made using the best local ingredients.";
 }
 
 .featured-items {
@@ -271,7 +264,7 @@ header {
 footer {
     grid-area: footer;
     display: grid;
-    grid-template-columns: var(--col-2)
+    grid-template-columns: var(--col-2);
     grid-auto-rows: auto;
     grid-template-areas:
     'social social'

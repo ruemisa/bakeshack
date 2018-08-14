@@ -1,0 +1,153 @@
+/***************************************************/
+/*******************MEDIA QUERIES*******************/
+/***************************************************/
+
+@media only screen and (min-width: 1024px) {
+    
+    /* Global */
+
+    .break {
+        display: inline;
+    }
+
+    /* Header */
+
+    header {
+        padding-bottom: 15rem;
+    }
+
+    #logo {
+        font-size: 5.5rem;
+    }
+
+    .menu-tab {
+        font-size: 2rem;
+    }
+
+    /* Content Area */
+
+    .hero {
+        height: 80vh;
+        margin-bottom: 5rem;
+    }
+
+    .catchphrase {
+        margin: 0 0 10rem 5rem;
+        font-size: 4.8rem;
+    }
+
+    .introductory h2 {
+        font-size: 4rem;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+    }
+
+    #intro-para {
+        font-size: 2rem;
+        padding: 1rem;
+        margin-bottom: 3rem;
+    }
+
+    #intro-para::after {
+        content: "Establish in 2018, Bake Shack is a newcomer to Bed-Stuy. We serve an assortment of freshly baked cakes, cookies, and muffins daily. Drop by and see what's up!"
+
+    }
+    /* Featured Items */
+
+    .featured h2 {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        font-size: 4rem;
+    }
+
+    #feature-para {
+        width: 80%;
+        margin-bottom: 3rem;
+        padding: 1rem;
+        font-size: 2rem;
+    }
+
+    #feature-para::after {
+        content: " We value building relationships with both our suppliers and our clients. Because of that, our goods are all made using the best local ingredients available."
+    }
+
+    .featured-items {
+        display: grid;
+        grid-template-columns: var(--col-3);
+        grid-auto-rows: var(--standard-row); 
+    }
+
+    .feature-card ul li {
+        font-size: 1.5rem;
+    }
+
+    /* Footer */
+
+    footer {
+        grid-template-columns: var(--col-4);
+        grid-auto-rows: var(--standard-row);
+        grid-template-areas: 
+        'site-nav . . social'
+        'contact . . copyright';    
+    }
+
+    footer .hidden {
+        display: block;
+    }
+
+    .site-nav {
+        grid-area: site-nav;
+        margin: 1rem 0;
+    }
+
+    .site-nav li {
+        display: inline;
+        padding: 0 var(--li-space);
+        font-size: 1.3rem;
+        text-transform: uppercase;
+    }
+
+    .contact-info {
+        padding-bottom: 1rem;
+        font-size: 1.325rem;
+    }
+
+    .social-media {
+        align-self: center;
+    }
+
+    .social-media li {
+        margin: 0 1rem;
+    }
+
+    #copyright {
+        align-self: center;
+        font-size: 1.1rem;
+    }
+
+    /* Products Page */
+
+    .product-container {
+        grid-template-columns: var(--col-3);
+        margin-top: 10rem;
+    }
+
+    .products {
+        height: 90vh;
+    }
+
+    .products h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .product-img {
+        height: 45vh;
+        margin-bottom: 1.5rem;
+    }
+
+    .products li, .products p {
+        margin-bottom: .5rem;
+        font-size: 1.5rem;
+    }
+}

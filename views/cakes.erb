@@ -4,7 +4,7 @@
         <% products.each do |cake| %>
     <div class="products">  
         <h2><%= cake.name %> </h2>
-        <img src=<%=cake.images %> >
+        <img class="product-img" src=<%=cake.images %> >
             <%  description = cake.desc %>
             <%  description.each do |desc| %>
             <ul> 
@@ -12,6 +12,13 @@
             </ul>
                 <% end %>
         <p> $<%= cake.price %> </p>
+        <form method="PATCH" action="/cart" autocomplete="off" class="cart-form">
+            <label> Qty: </label>
+            <input type="text" name="quantity" required>
+            <a href="">
+                <img src="/images/icons/025-shopping-bag.png">
+            </a>
+        </form>
     </div>        
         <% end %>
 </section>

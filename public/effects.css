@@ -39,10 +39,22 @@
     background-position: 50% 30%;
 }
 
+/* FEATURE PRODUCT HOVER */
+
+.feature-card div:hover {
+    opacity: .7;
+}
+
 /* SOCIAL MEDIA BUTTONS */
 
 .icon-img:hover {
     opacity: .8;
     width: 11%;
-    transition: 1.2s;
+    transition: .5s;
+}
+
+/* SITE NAV When it appears */
+
+.site-nav li:hover {
+    color: var(--off-white);
 }

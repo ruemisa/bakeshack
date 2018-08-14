@@ -25,9 +25,39 @@
     margin-bottom: 1rem;
 }
 
-.products img {
+.product-img {
     height: 40vh;
     width: 100%;
     box-shadow: var(--img-shadow);
     margin: .5rem 0;
+}
+
+.products li, .products p {
+    margin-bottom: .5rem;
+}
+
+.products .cart-form {
+    position: relative;
+}
+
+.cart-form label {
+    position: absolute;
+    top: 1rem;
+    left: 2%;
+    font-size: 1rem;
+}
+
+.products .cart-form input {
+    position: absolute;
+    top: 1.5rem;
+    left: 10%;
+    width: 1.5rem;
+}
+
+.products .cart-form a img {
+    position: absolute;
+    top: 1%;
+    left: 18%;
+    width: 10%;
+
 }
