@@ -1,0 +1,33 @@
+.events {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: var(--standard-row);
+    margin: 4rem 0;
+    justify-items: center;
+}
+
+.list {
+    width: 90%;
+    height: 50vh;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--off-white);
+    box-shadow: var(--card-shadow);
+}
+
+.list h3 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.list img {
+    height: auto;
+    width: 100%;
+    box-shadow: var(--img-shadow);
+    margin: .5rem 0;
+}
+
+.list p {
+    margin-bottom: 1rem;
+}

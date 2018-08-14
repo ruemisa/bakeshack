@@ -1,0 +1,36 @@
+/***************************************************/
+/*******************OVERLAY MENU *******************/
+/***************************************************/
+
+.overlay {
+    position: fixed;
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    background-color: var(--main-color);
+    transition: 0.5s;
+}
+
+.grid-menu-content {
+    position: relative;
+    top: 20%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-rows: auto;
+}
+
+.grid-menu div {
+    background-color: var(--complementary);
+}
+
+/* .grid-menu div:hover, .grid-menu div:focus {
+    
+}
+
+.overlay .close-btn {
+
+} */

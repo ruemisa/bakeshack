@@ -49,12 +49,12 @@ end
 # Events API
 
 get '/events' do 
-    @query = 'baking'
-    @location = 'bed-stuy'
+    @query = 'baking-class'
+    @location = 'brooklyn'
     response = HTTParty.get("https://www.eventbriteapi.com/v3/events/search/?q=#{@query}&location.address=#{@location}&token=#{ ENV[ 'API_KEY' ] }")
     @event_data = JSON.parse(response.body)
-    @events = @event_data['events']
-    puts @events
+    @events = @event_data['events'].first(5)
+
     erb :events
 end
 
