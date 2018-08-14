@@ -16,7 +16,6 @@
         <section class="introductory">
 
             <h2>A Neighborhood Baby</h2>
-            <img src="images/" alt="" class="owner-pic hidden">
             <p id="intro-para"></p>
 
         </section>
@@ -31,30 +30,36 @@
             <div class="featured-items">
                 
                 <div class="feature-card">
-                    <div class="feature-img feature-1">
+                    <div class="feature-img feature-1">                   
                         <a href="cakes.erb">
+                            <img src=<%= $cakes[1].images %> height="100%" width="100%">
+
                             <h3 class="hidden">See more Cakes</h3>
                         </a>
                     </div>
                     <ul>
                         <li><%= $cakes[1].name %></li>
                         <li>$<%= $cakes[1].price %></li>
+                
+
                     </ul> 
                 </div>
                 <div class="feature-card">
                     <div class="feature-img feature-2">
                         <a href="cookies.erb">
+                            <img src=<%= $cookies[1].images %> height="100%" width="100%">
                             <h3 class="hidden">See more Cookies</h3>
                         </a>
                     </div>
                     <ul>
-                        <li><%= $cookies[0].name %></li>
-                        <li>$<%= $cookies[0].price %></li>
+                        <li><%= $cookies[1].name %></li>
+                        <li>$<%= $cookies[1].price %></li>
                     </ul> 
                 </div>
                 <div class="feature-card">
                     <div class="feature-img feature-3">
                         <a href="muffins.erb">
+                            <img src=<%= $muffins[0].images %> height="100%" width="100%">
                             <h3 class="hidden">See more Muffins</h3>
                         </a>
                     </div>
