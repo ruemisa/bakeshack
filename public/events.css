@@ -8,8 +8,8 @@
 
 .list {
     width: 90%;
-    height: 50vh;
-    padding: 2rem;
+    height: 80vh;
+    padding: 1rem;
     margin-bottom: 2rem;
     background-color: var(--off-white);
     box-shadow: var(--card-shadow);
