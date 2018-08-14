@@ -1,5 +1,3 @@
-
-
 :root {
     --main-color: rgba(21, 135, 215, .8);
     --complementary: rgba(228, 65, 152, 0.6);
@@ -223,14 +221,13 @@ header {
 }
 
 .feature-card {
-    height: 100vh;
+    height: auto;
     margin: 1rem 1.5rem 1.5rem 1.5rem;
     background-color: var(--offwhite);
     display: grid;
     grid-template-columns: 1fr;
     grid-auto-rows: var(--standard-row);
     box-shadow: var(--card-shadow);
-    padding-bottom: 5rem;
 }
 
 .feature-card ul {
@@ -240,6 +237,15 @@ header {
 .feature-card ul li {
     display: inline;
     padding: 0 var(--li-space);
+}
+
+.feature-card .inner {
+    margin-right: 2rem;
+    padding: .5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: 'Didact Gothic', sans-serif;    
 }
 
 .feature-img {

@@ -1,0 +1,17 @@
+<section class="product-container">
+    
+        <% products = $muffins %>
+        <% products.each do |muffin| %>
+    <div class="products">  
+        <h3><%= muffin.name %> </h3>
+        <img src=<%=muffin.images %> >
+            <%  description = muffin.desc %>
+            <%  description.each do |desc| %>
+            <ul> 
+                <li> <%= desc %> </li>                       
+            </ul>
+                <% end %>
+        <p> $<%= muffin.price %> </p>
+    </div>
+        <% end %>
+</section>

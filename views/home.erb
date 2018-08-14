@@ -33,15 +33,18 @@
                     <div class="feature-img feature-1">                   
                         <a href="cakes.erb">
                             <img src=<%= $cakes[1].images %> height="100%" width="100%">
-
                             <h3 class="hidden">See more Cakes</h3>
                         </a>
                     </div>
                     <ul>
                         <li><%= $cakes[1].name %></li>
                         <li>$<%= $cakes[1].price %></li>
-                
-
+                        <ul class="inner">
+                            <% desc = $cakes[1].desc %>
+                            <% desc.each do |x| %>
+                            <li> <%= x %> </li>
+                            <% end %>
+                        </ul>           
                     </ul> 
                 </div>
                 <div class="feature-card">
@@ -54,6 +57,12 @@
                     <ul>
                         <li><%= $cookies[1].name %></li>
                         <li>$<%= $cookies[1].price %></li>
+                        <ul class="inner">
+                            <% desc = $cookies[1].desc %>
+                            <% desc.each do |x| %>
+                            <li> <%= x %> </li>
+                            <% end %>
+                        </ul>  
                     </ul> 
                 </div>
                 <div class="feature-card">
@@ -66,6 +75,12 @@
                     <ul>
                         <li><%= $muffins[0].name %></li>
                         <li>$<%= $muffins[0].price %></li>
+                        <ul class="inner">
+                            <% desc = $muffins[0].desc %>
+                            <% desc.each do |x| %>
+                            <li> <%= x %> </li>
+                            <% end %>
+                        </ul>  
                     </ul> 
                 </div>
 

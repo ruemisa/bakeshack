@@ -22,34 +22,6 @@ end
 
 
 get '/' do
-    @cookie1 = Cookie.new('Overload', ['milk chocolate', 'macadamia', 'marshmallows'], 4)
-    @cookie1.add_image('/images/overload.jpg')
-
-    @cookie2 = Cookie.new('Peanutty', ['Peanut Butter', 'Cashews'], 3)
-    @cookie2.add_image('/images/peanut-butter.jpg')
-
-    @cookie3 = Cookie.new('Mint Condition', ['Mint', 'Dark Chocolate'], 3)
-    @cookie3.add_image('/images/mint.jpg')
-
-    @cake1 = Cake.new('Dark Forest', ['Dark Chocolate', 'Coconut Flakes', 'Dulce De Leche'], 55)
-    @cake1.add_image('/images/dark-forest.jpg')
-
-    @cake2 = Cake.new('Passionate', ['Passion Fruit Mousse', 'Mango', 'Almonds'], 60)
-    @cake2.add_image('/images/passionate.jpg')
-
-    @cake3 = Cake.new('Red Winter', ['Strawberry Flan', 'Raspberries', 'Meringue'], 65)
-    @cake3.add_image('/images/red-winter.jpg')
-
-    @muffin1 = Muffin.new('Midnight', ['Dark Chocolate', 'Roasted Pecans'], 5)
-    @muffin1.add_image('/images/midnight.jpg')
-
-    @muffin2 = Muffin.new('Egged', ['Sweet Custard Filling', 'Toasted Eggnog', 'Soft Meringue'], 5)
-    @muffin2.add_image('/images/eggnog.jpeg')
-
-    @muffin3 = Muffin.new('Normal', ['Genoise', 'Chocolate Chips', 'Walnuts'], 4)
-    @muffin3.add_image('/images/normal.jpg')
-
-
     erb :home
 end
 
@@ -74,6 +46,17 @@ post '/checkout' do
     erb :checkout
 end
 
+# Events API
+
+get '/events' do 
+    @query = 'baking'
+    @location = 'bed-stuy'
+    response = HTTParty.get("https://www.eventbriteapi.com/v3/events/search/?q=#{@query}&location.address=#{@location}&token=#{ ENV[ 'API_KEY' ] }")
+    @event_data = JSON.parse(response.body)
+    @events = @event_data['events']
+    puts @events
+    erb :events
+end
 
 # The Cart (Just in case I need it)
 
@@ -181,3 +164,31 @@ class Muffin
     end
     
 end
+
+@cookie1 = Cookie.new('Overload', ['milk chocolate', 'macadamia', 'marshmallows'], 4)
+@cookie1.add_image('/images/overload.jpg')
+
+@cookie2 = Cookie.new('Peanutty', ['Peanut Butter', 'Cashews'], 3)
+@cookie2.add_image('/images/peanut-butter.jpg')
+
+@cookie3 = Cookie.new('Mint Condition', ['Mint', 'Dark Chocolate'], 3)
+@cookie3.add_image('/images/mint.jpg')
+
+@cake1 = Cake.new('Dark Forest', ['Dark Chocolate', 'Coconut Flakes', 'Dulce De Leche'], 55)
+@cake1.add_image('/images/dark-forest.jpg')
+
+@cake2 = Cake.new('Passionate', ['Passion Fruit Mousse', 'Mango', 'Almonds'], 60)
+@cake2.add_image('/images/passionate.jpg')
+
+@cake3 = Cake.new('Red Winter', ['Strawberry Flan', 'Raspberries', 'Meringue'], 65)
+@cake3.add_image('/images/red-winter.jpg')
+
+@muffin1 = Muffin.new('Midnight', ['Dark Chocolate', 'Roasted Pecans'], 5)
+@muffin1.add_image('/images/midnight.jpg')
+
+@muffin2 = Muffin.new('Egged', ['Sweet Custard Filling', 'Toasted Eggnog', 'Soft Meringue'], 5)
+@muffin2.add_image('/images/eggnog.jpeg')
+
+@muffin3 = Muffin.new('Normal', ['Genoise', 'Chocolate Chips', 'Walnuts'], 4)
+@muffin3.add_image('/images/normal.jpg')
+

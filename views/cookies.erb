@@ -1,5 +1,17 @@
-<h1>  <%= $cookies[0].name %> </h1>
-<h1>  <%= $cookies[1].name %> </h1>
-
-
-<h1> test </h2>
+<section class="product-container">
+    
+        <% products = $cookies %>
+        <% products.each do |cookie| %>
+    <div class="products">  
+        <h3><%= cookie.name %> </h3>
+        <img src=<%=cookie.images %> >
+            <%  description = cookie.desc %>
+            <%  description.each do |desc| %>
+            <ul> 
+                <li> <%= desc %> </li>                       
+            </ul>
+                <% end %>
+        <p> $<%= cookie.price %> </p>
+    </div>  
+        <% end %>
+</section>
