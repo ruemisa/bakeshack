@@ -20,7 +20,7 @@
         <header id="top">
 
 
-            <h1 id="logo"> Bake <span class="break">Shack</span> </h1>
+            <a href="<%= '/' %>"> <h1 id="logo"> Bake <span class="break">Shack</span> </h1> </a>
 
             <div class="menu-tab">
 
@@ -32,15 +32,14 @@
 
             <!-- Menu Content Hidden-->
 
-            <nav class="overlay hidden-menu" id="popMenu">
+            <nav class="overlay" id="popMenu">
 
                 <div class="grid-menu-content">
                     <div><a href="javascript:void[0]" class="close-btn" onclick="closeMenu()">--close</a></div>
-                    <div><a href="/cakes">Cakes</a></div>
-                    <div><a href="/cookies">Cookies</a></div>
-                    <div><a href="/muffins">Muffins</a></div>
-                    <div><a href="/events">Events</a></div>
-                    <div><a href="/checkout">Checkout</a></div>
+                    <div><a href="<%= '/cakes' %>">Cakes</a></div>
+                    <div><a href="<%= '/cookies' %>">Cookies</a></div>
+                    <div><a href="<%= '/muffins' %>">Muffins</a></div>
+                    <div><a href="<%= '/events' %>">Events</a></div>
                 </div>
 
             </nav>
@@ -91,6 +90,6 @@
 
     </div>
 
-    <script type="text/javascript" src="/button.js"></script>
+    <script type="text/javascript" src="/menu.js"></script>
 </body>
 </html>
