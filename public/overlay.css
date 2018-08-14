@@ -16,7 +16,7 @@
 
 .grid-menu-content {
     position: relative;
-    top: 20%;
+    top: 15%;
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
