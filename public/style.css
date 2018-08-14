@@ -103,6 +103,10 @@ header {
     cursor: pointer;
 }
 
+.menu-tab span:hover {
+    color: var(--highlight-pink);
+}
+
 .hidden-menu {
     display: none;
 }

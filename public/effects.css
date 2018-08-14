@@ -1,0 +1,48 @@
+/***************************************************/
+/*******************ALL EFFECTS*********************/
+/***************************************************/
+
+.overlay .close-btn:hover {
+    color: red;
+}
+
+.overlay .grid-menu-content a:hover {
+    color: var(--highlight-blue);
+}
+
+.overlay .grid-menu-content div:hover {
+    transition: 1.2s;
+    font-size: 2.5rem;
+}
+
+#tab-1:hover {
+    background: url('/images/cakes.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 10%;
+}
+
+#tab-2:hover {
+    background: url('/images/cookies.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 10%;
+}
+
+#tab-3:hover {
+    background: url('/images/muffins.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 45%;
+}
+
+#tab-4:hover {
+    background: url('/images/events.jpg') no-repeat;
+    background-size: cover;
+    background-position: 50% 30%;
+}
+
+/* SOCIAL MEDIA BUTTONS */
+
+.icon-img:hover {
+    opacity: .8;
+    width: 11%;
+    transition: 1.2s;
+}

@@ -10,6 +10,7 @@
     <link href="/product.css" rel="stylesheet" type="text/css">
     <link href="/events.css" rel="stylesheet" type="text/css">
     <link href="/overlay.css" rel="stylesheet" type="text/css">
+    <link href="/effects.css" rel="stylesheet" type="text/css">
 </head>
 <body>
     
@@ -33,13 +34,13 @@
             <!-- Menu Content Hidden-->
 
             <nav class="overlay" id="popMenu">
-
+                <a href="javascript:void[0]" class="close-btn" onclick="closeMenu()">- close</a>
                 <div class="grid-menu-content">
-                    <div><a href="javascript:void[0]" class="close-btn" onclick="closeMenu()">--close</a></div>
-                    <div><a href="<%= '/cakes' %>">Cakes</a></div>
-                    <div><a href="<%= '/cookies' %>">Cookies</a></div>
-                    <div><a href="<%= '/muffins' %>">Muffins</a></div>
-                    <div><a href="<%= '/events' %>">Events</a></div>
+                    
+                    <div class="tabs" id="tab-1"><a href="<%= '/cakes' %>">Cakes</a></div>
+                    <div class="tabs" id="tab-2"><a href="<%= '/cookies' %>">Cookies</a></div>
+                    <div class="tabs" id="tab-3"><a href="<%= '/muffins' %>">Muffins</a></div>
+                    <div class="tabs" id="tab-4"><a href="<%= '/events' %>">Events</a></div>
                 </div>
 
             </nav>

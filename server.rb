@@ -38,6 +38,9 @@ get '/muffins' do
     erb :cakes
 end
 
+=begin  
+
+# ! Additional features in the future
 patch '/cart' do
     erb :cart
 end
@@ -46,9 +49,12 @@ post '/checkout' do
     erb :checkout
 end
 
+=end
+
 # Events API
 
 get '/events' do 
+    # params can replace the values here if I add a search bar feature on the page
     @query = 'baking-class'
     @location = 'brooklyn'
     response = HTTParty.get("https://www.eventbriteapi.com/v3/events/search/?q=#{@query}&location.address=#{@location}&token=#{ ENV[ 'API_KEY' ] }")
@@ -75,6 +81,7 @@ class Cart
     end    
 
 end
+
 
 # The Products
 
@@ -164,6 +171,9 @@ class Muffin
     end
     
 end
+
+# Creating Each Product 
+# I could loop through this but I will need unique names for each. If there is a random name generator with flavors and price, would be splendid
 
 @cookie1 = Cookie.new('Overload', ['milk chocolate', 'macadamia', 'marshmallows'], 4)
 @cookie1.add_image('/images/overload.jpg')
