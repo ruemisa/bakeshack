@@ -58,3 +58,10 @@
 .site-nav li:hover {
     color: var(--off-white);
 }
+
+/* EVENTS LINK */
+
+.events .list .event-link:hover {
+    color: var(--highlight-pink);
+}
+
