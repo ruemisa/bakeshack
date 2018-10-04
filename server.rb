@@ -37,7 +37,7 @@ get '/cakes' do
 end
 
 get '/muffins' do
-    erb :cakes
+    erb :muffins
 end
 
 =begin  
